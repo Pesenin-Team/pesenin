@@ -6,6 +6,10 @@ python:
 jobs:
   include:
     - stage: test
+      script:
+        - coverage run --include=comingsoon/* manage.py test
+        - coverage report -m
+
     - stage: deploy
       script: skip
       deploy: &heroku

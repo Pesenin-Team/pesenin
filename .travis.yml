@@ -2,19 +2,12 @@ dist: xenial
 language: python
 python:
     - "3.7"
-
 jobs:
   include:
-    - stage: test
-      before_script:
-        - gem install dpl
-        - wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
-      script:
-        - dpl --provider=heroku --app=$HEROKU_APPNAME --api-key=$HEROKU_APIKEY
-        - export HEROKU_API_KEY=$HEROKU_APIKEY
-        - heroku run --app $HEROKU_APPNAME migrate
     - stage: deploy
-      script: skip
+      script: 
+        - npm test
+        - npm run build
       deploy: &heroku
         provider: heroku
         app: $HEROKU_APP_NAME

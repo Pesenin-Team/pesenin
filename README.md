@@ -1,4 +1,5 @@
 # pesenin
+[![Build Status](https://travis-ci.org/Pesenin-Team/pesenin.svg?branch=master)](https://travis-ci.org/Pesenin-Team/pesenin)
 Web application untuk memesan makanan dengan django. klik [disini](https://pesenin.herokuapp.com) untuk melihat web.
 
 ## Team

@@ -6,16 +6,6 @@ python:
 jobs:
   include:
     - stage: test
-      before_script:
-          - python manage.py collectstatic --noinput
-      script:
-          - coverage run --include=comingsoon/* manage.py test
-          - coverage report -m
-    - stage: lint
-      script:
-          - pylint --load-plugins pylint_django --disable=unused-argument comingsoon
-          - isort --check-only --diff
-          - pydocstyle comingsoon --ignore=D100,D101,D104,D106,D203
     - stage: deploy
       script: skip
       deploy: &heroku

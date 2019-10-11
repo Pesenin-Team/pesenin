@@ -1,5 +1,5 @@
 # pesenin
-Web application untuk memesan makanan dengan django. klik [disini][pesenin.herokuapp.com] untuk melihat web.
+Web application untuk memesan makanan dengan django. klik [disini][https://pesenin.herokuapp.com] untuk melihat web.
 
 ## Team
 - Mushaffa Huda

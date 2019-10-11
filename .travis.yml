@@ -6,8 +6,7 @@ jobs:
   include:
     - stage: deploy
       script: 
-        - npm test
-        - npm run build
+        - python manage.py collectstatic --noinput
       deploy: &heroku
         provider: heroku
         app: $HEROKU_APP_NAME

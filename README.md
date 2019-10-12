@@ -13,6 +13,10 @@ Web application untuk memesan makanan dengan framework django. klik [disini][her
 - Lia Yuliana
 - Daril Nofriansyah
 
+## 🎓 About
+
+Pesenin adalah sebuah aplikasi yang bertujuan untuk mempermudah mahasiswa dan dosen dalam memesan makanan di kantin, dengan menghubungkan antara penjual dan pembeli dalam satu website.
+
 ## 🚀 Quick start
 
 1.  **Create a Local Repository.**
@@ -48,9 +52,6 @@ Web application untuk memesan makanan dengan framework django. klik [disini][her
 
     Buka `home` directory di text editor pilihanmu dan edit `/templates/home/index.html`. Save dan lihat browser untuk update real time!
 
-## 🎓 About
-
-Aplikasi ini bertujuan untuk mempermudah mahasiswa dan dosen dalam memesan makanan di kantin, dengan menghubungkan antara penjual dan pembeli dalam satu website.
 
 ## 🧐 Fitur?
 

@@ -1,13 +1,9 @@
 
 <p align="center">
-    <img src="/templates/img/LOGO.png" alt="PESENIN LOGO" width="330">
+    <img src="/static/img/LOGO.png" alt="PESENIN LOGO" width="330">
 </p>
 
-<p align="center" markdown="1">
-
-   [![Build Status](https://travis-ci.org/Pesenin-Team/pesenin.svg?branch=master)](https://travis-ci.org/Pesenin-Team/pesenin) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
- </p>
+[![Build Status](https://travis-ci.org/Pesenin-Team/pesenin.svg?branch=master)](https://travis-ci.org/Pesenin-Team/pesenin) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Web application untuk memesan makanan dengan framework django. klik [disini][herokuapp] untuk melihat web.
 

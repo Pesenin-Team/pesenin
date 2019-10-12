@@ -3,7 +3,7 @@
     <img src="/templates/img/LOGO.png" alt="PESENIN LOGO" width="330">
 </p>
 
-<p align="center">
+<p align="center" markdown="1">
     [![Build Status](https://travis-ci.org/Pesenin-Team/pesenin.svg?branch=master)](https://travis-ci.org/Pesenin-Team/pesenin) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 </p>
 

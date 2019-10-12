@@ -4,5 +4,5 @@ from django.shortcuts import render
 
 
 def coming(request):
-
+    ''' render comingsoon page'''
     return render(request, 'index.html')

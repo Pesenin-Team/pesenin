@@ -1,4 +1,12 @@
-# pesenin [![Build Status](https://travis-ci.org/Pesenin-Team/pesenin.svg?branch=master)](https://travis-ci.org/Pesenin-Team/pesenin) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+<p align="center">
+    <img src="/templates/img/LOGO.png" alt="PESENIN LOGO" width="330">
+</p>
+
+<p align="center">
+    [![Build Status](https://travis-ci.org/Pesenin-Team/pesenin.svg?branch=master)](https://travis-ci.org/Pesenin-Team/pesenin) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+</p>
+
 Web application untuk memesan makanan dengan framework django. klik [disini][herokuapp] untuk melihat web.
 
 ## Team
@@ -14,7 +22,6 @@ Web application untuk memesan makanan dengan framework django. klik [disini][her
     *Clone* Repository ini.
 
     ```sh
-    # clone repo ini 
     $ git clone https://github.com/Pesenin-Team/pesenin.git
     ```
 
@@ -72,13 +79,13 @@ Lihat dibawah untuk konten *top-level* directory dari project ini
     ├── requirements.txt
     └── README.md
 
-1.  **`/comingsoon`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+1.  **`/comingsoon`**: Directory ini adalah app untuk fitur coming soon dari pesenin.
 
-2.  **`/pesenin`**: directory ini berisi default starterproject yang disediakan oleh django.
+2.  **`/pesenin`**: Directory ini berisi default starterproject yang disediakan oleh django.
 
-3.  **`/templates`**: directory ini berisi template base html yang akan digunakan global di semua app di project ini
+3.  **`/templates`**: Directory ini berisi template base html yang akan digunakan global di semua app di project ini
 
-4. **`/static`**: directory ini berisi file static yang akan digunakan secara global
+4. **`/static`**: Directory ini berisi file static yang akan digunakan secara global
 
 5.  **`.gitignore`**: File ini memberi informasi kepada git file mana yang tidak perlu di *track* / di *maintain* versi historynya.
 

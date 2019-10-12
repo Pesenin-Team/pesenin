@@ -1,0 +1,25 @@
+{% load static %}
+<!doctype html>
+<html>
+
+<head>
+    {% include 'components/head.html' %}
+</head>
+
+<body>
+
+    {% block main_container %}
+    <div class="container m-auto{% if vertical_center %} d-flex h-100 align-items-center{% endif %}">
+        <main role="main" class="w-100">
+            {% block content %}
+            {% endblock content %}
+        </main>
+    </div>
+    {% endblock %}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    {% block custom_scripts %}
+    {% endblock custom_scripts %}
+</body>
+
+</html>

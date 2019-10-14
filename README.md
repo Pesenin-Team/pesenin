@@ -11,6 +11,7 @@ Web application untuk memesan makanan dengan framework django. klik [disini][her
 - Mushaffa Huda
 - Kukuh Hafiyyan
 - Muhamad Daril Nofriansyah Badruddin
+- Lia Yuliana
 
 ## 🎓 About
 

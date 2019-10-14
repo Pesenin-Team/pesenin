@@ -9,9 +9,6 @@ Web application untuk memesan makanan dengan framework django. klik [disini][her
 
 ## Team
 - Mushaffa Huda
-- Kukuh Hafiyyan
-- Lia Yuliana
-- Daril Nofriansyah
 
 ## 🎓 About
 

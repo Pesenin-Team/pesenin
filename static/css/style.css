@@ -23,13 +23,3 @@ html, body {
 .no-deco {
   text-decoration: none !important;
 }
-
-.header {
-    font-family: 'Karla', sans-serif;
-    color: #FDB201;
-    margin-left:  60px;
-  }
-  
-.header h1{    
-    font-size: 80px;
-}

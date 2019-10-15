@@ -7,6 +7,11 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-md fixed-top bg-dark navbar-dark">
+        {% block navbar %}
+        {% include 'components/navbar.html' %}
+        {% endblock navbar %}
+    </nav>
 
     {% block main_container %}
     <div class="container m-auto{% if vertical_center %} d-flex h-100 align-items-center{% endif %}">

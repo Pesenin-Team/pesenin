@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 
+import dj_database_url
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -19,20 +21,23 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '2jz_m3lr$h@3v+3rzu%-z97^b7s!_vnqv$nbguh!8fffh8+b4d'
+SECRET_KEY = os.getenv('SECRET_KEY', '0xdeadbeef')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+PRODUCTION = os.getenv('DATABASE_URL') is not None
+DEBUG = not PRODUCTION
 
 ALLOWED_HOSTS = ['*']
 
+# auto-redirect to use HTTPS in production
+SECURE_SSL_REDIRECT = PRODUCTION
 
 # Application definition
 
 INSTALLED_APPS = [
     'comingsoon.apps.ComingsoonConfig',
     'login.apps.LoginConfig',
+    'django_cas_ng',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -83,6 +88,29 @@ DATABASES = {
     }
 }
 
+DATABASES['default'] = dj_database_url.config(
+) if PRODUCTION else DATABASES['default']
+
+# Authentication backends
+# https://docs.djangoproject.com/en/2.1/topics/auth/customizing/#specifying-authentication-backends
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'django_cas_ng.backends.CASBackend',
+)
+
+# Django CAS-NG configuration
+
+CAS_SERVER_URL = os.getenv("CAS_SERVER_URL", 'https://sso.ui.ac.id/cas2/')
+CAS_LOGIN_URL_NAME = 'login:login'
+CAS_FORCE_CHANGE_USERNAME_CASE = 'lower'
+
+
+# SSO-UI configuration
+
+SSO_UI_ORG_DETAIL_FILE_PATH = "login/static/login/kodoru.json"
+SSO_UI_ORG_DETAIL_LANG = "id"
+
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -106,7 +134,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'id-id'
 
 TIME_ZONE = 'UTC'
 

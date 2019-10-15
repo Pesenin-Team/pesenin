@@ -9,6 +9,8 @@
             <a class="nav-link{% if current_nav == 'home' %} font-weight-bold text-light{% endif %}"
                 href="{% url 'login:home' %}">Beranda</a>
         </li>
+    </ul>
+    <ul class="navbar-nav mr-0">
         {% if user.is_authenticated %}
         <li class="nav-item mx-2">
             <a class="nav-link{% if current_nav == 'profile' %} font-weight-bold text-light{% endif %}"

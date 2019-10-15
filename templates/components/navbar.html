@@ -12,12 +12,16 @@
         {% if user.is_authenticated %}
         <li class="nav-item mx-2">
             <a class="nav-link{% if current_nav == 'profile' %} font-weight-bold text-light{% endif %}"
-                href="{% url 'sso_ui:profile' %}">Profil</a>
+                href="{% url 'login:profile' %}">Profil</a>
+        </li>
+        <li class="nav-item mx-2">
+            <a class="nav-link" href="{% url 'login:logout' %}">Logout</a>
+        </li>
+        {% else %}
+        <li class="nav-item mx-2">
+            <a class="nav-link" href="{% url 'login:login' %}">Login</a>
         </li>
         {% endif %}
-        <li class="nav-item mx-2">
-            <a class="nav-link" href="https://github.com/anakpacil/sso-ui-starter-django">Repo GitHub</a>
-        </li>
     </ul>
     {% endblock navbar_contents%}
 </div>

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
@@ -6,10 +6,16 @@ from django.contrib.auth.decorators import login_required
 
 def home(request):
     '''Render Home Pesenin'''
-    return render(request, 'home/index.html')
+    if(request.user.is_authenticated):
+        print("haha")
+        context = {
+            "nama": request.user.get_full_name().split(" ")[0],
+        }
+        return render(request, 'home/index.html', context)
+    return render(request, 'home/index.html',)
 
 
-@login_required(login_url='sso_ui:login')
+@login_required(login_url='login:login')
 def profile(request):
     """Render profile page."""
     context = {

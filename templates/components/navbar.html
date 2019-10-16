@@ -48,6 +48,10 @@
             href="{% url 'merchant:merchant' %}">Merchant</a>
     </li>
     <li class="mx-2 text-center">
+        <a class="nav-link{% if current_nav == 'queue' %} font-weight-bold text-light{% endif %} text-light"
+            href="{% url 'antrian:queue' %}">Queue</a>
+    </li>
+    <li class="mx-2 text-center">
         <a class="nav-link{% if current_nav == 'contact' %} font-weight-bold text-light{% endif %}  text-light"
             href="{% url 'form:contact' %}">Contact</a>
     </li>

@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'form',
     'merchant.apps.MerchantConfig',
+    'antrian.apps.AntrianConfig',
 ]
 
 MIDDLEWARE = [

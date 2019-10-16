@@ -1,0 +1,29 @@
+{% extends 'pesenin/base.html' %}
+
+{% block navbar %}
+{% with current_nav='queue' %}
+{{ block.super }}
+{% endwith %}
+{% endblock navbar%}
+
+{% block main_container %}
+{% with vertical_center=True %}
+{{ block.super }}
+{% endwith %}
+{% endblock main_container %}
+
+
+{% load static %}
+{% block custom_styles %}
+{% endblock custom_styles %}
+{% block content %}
+
+<body>
+    <div>
+        <div class="container">
+            <h1>Queue.</h1>
+            <h1>{ to do }</h1>
+        </div>
+    </div>
+</body>
+{% endblock content %}

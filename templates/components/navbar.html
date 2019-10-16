@@ -55,8 +55,8 @@
         <a class="nav-link{% if current_nav == 'contact' %} font-weight-bold text-light{% endif %}  text-light"
             href="{% url 'form:contact' %}">Contact</a>
     </li>
-    {% if user.is_authenticated %}
     <div class="user">
+        {% if user.is_authenticated %}
         <li class="mx-2 text-center">
             <a class="nav-link{% if current_nav == 'profile' %} font-weight-bold text-light{% endif %} text-light"
                 href="{% url 'login:profile' %}">Profil</a>
@@ -68,6 +68,6 @@
         <li class="mx-2 text-center">
             <a class="nav-link text-light" href="{% url 'login:login' %}">Login</a>
         </li>
+        {% endif %}
     </div>
-    {% endif %}
 </ul>

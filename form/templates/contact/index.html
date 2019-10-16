@@ -1,5 +1,18 @@
 {% extends 'pesenin/base.html' %}
 
+{% block navbar %}
+{% with current_nav='contact' %}
+{{ block.super }}
+{% endwith %}
+{% endblock navbar%}
+
+{% block main_container %}
+{% with vertical_center=True %}
+{{ block.super }}
+{% endwith %}
+{% endblock main_container %}
+
+
 {% load static %}
 {% block custom_styles %}
 {% endblock custom_styles %}

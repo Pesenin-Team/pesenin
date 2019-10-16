@@ -7,7 +7,6 @@ from django.contrib.auth.decorators import login_required
 def home(request):
     '''Render Home Pesenin'''
     if(request.user.is_authenticated):
-        print("haha")
         context = {
             "nama": request.user.get_full_name().split(" ")[0],
         }

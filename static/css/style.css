@@ -31,10 +31,19 @@ html, body {
     align-items: stretch;
 }
 
-#sidebar {
+#backnav{
     min-width: 250px;
     max-width: 250px;
     height: 100%;
+    top: 0;
+    left: 0;
+    background: #8BB03E;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    height: 100vh;
     top: 0;
     left: 0;
     background: #8BB03E;
@@ -66,7 +75,7 @@ html, body {
 
 #sidebar ul li a {
     padding: 10px;
-    font-size: 1.5em;
+    font-size: 1.2em;
     display: block;
 }
 #sidebar ul li a:hover {
@@ -113,7 +122,7 @@ html, body {
 }
 
 #sidebar .user{
-  margin-top: 150px;
+    margin-top: 80px;
   bottom: 0;
 }
 

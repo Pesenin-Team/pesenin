@@ -5,9 +5,10 @@ from .models import Merchant
 
 
 def merchant(request):
-    nama_merchant = "Warkop DKI"
-    decs = "Sedia Mie Instant, Jeroan, dan Kopi"
-    link_gambar = "../../static/merchant/img/"
-    return render(request, 'merchant/index.html')
+    list_merchant = Merchant.objects.all()
+    content = {
+        "penjual": list_merchant
+    }
+    return render(request, 'merchant/index.html', content)
 
 

@@ -1,0 +1,28 @@
+.title{
+    color: #FDB201;
+    font-size: 7vh;
+    margin-top: 2vh;
+    margin-left:  2vh;
+    font-weight: bold;
+      
+}
+.teks{
+    margin-left: 2vh;
+}
+.sub{
+    font-size: 6vh;
+    margin-top: 20vh;
+    margin-left: 2vh;
+    font-weight: bold;
+}
+.btn{
+    border-radius: 12px;
+    background-color: #8BB03E;
+    border: none;
+    font-size: 3vh;
+    font-weight: bold;
+    color: white;
+    margin-left: 120vh;
+    padding: 3vh 3vh;
+
+}

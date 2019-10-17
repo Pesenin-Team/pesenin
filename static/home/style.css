@@ -53,3 +53,8 @@
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
+.orderup img{
+  width: 50px;
+  height: 100%;
+  object-fit: contain;
+}

@@ -20,9 +20,18 @@
 
 <body>
     <div>
-        <div class="container">
-            <h1>merchant</h1>
-            <h1>{ to do }</h1>
+        <div class="container">   
+            {% for items in penjual %}
+            <div class="row">
+                <div class="col-12">
+                    {{ items.nama_merchant }}
+                    {{ items.desc }}
+                    <img src="{{ items.link_gambar }}" alt="">
+                    
+                </div>
+            </div>
+            {% endfor %}
         </div>
+    </div>
 </body>
 {% endblock content %}

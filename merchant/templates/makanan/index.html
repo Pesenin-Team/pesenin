@@ -1,0 +1,35 @@
+{% extends 'pesenin/base.html' %}
+
+{% block navbar %}
+{% with current_nav='merchant' %}
+{{ block.super }}
+{% endwith %}
+{% endblock navbar%}
+
+{% block main_container %}
+{% with vertical_center=True %}
+{{ block.super }}
+{% endwith %}
+{% endblock main_container %}
+
+
+{% load static %}
+{% block custom_styles %}
+{% endblock custom_styles %}
+{% block content %}
+
+<body>
+    <div class = "container">
+        <div class = "row">
+        {% for items in food %}
+            <div class="col-6 text-center">
+                {{ items.nama }}
+                {{ items.desc }}
+                <img src = "{{ items.link_gambar }}" style = "width:450px">
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+</body>
+
+{% endblock content %}

@@ -12,6 +12,7 @@
   text-align: center;
   text-decoration:none;
   background-color:#FFA12B;
+  z-index: 2;
   display:block;
   position:relative;
   padding:20px 40px;
@@ -41,12 +42,12 @@
 .button:after{
   content:"";
   height:100%;
-  width:100%;
+  width:104.3%;
   padding:4px;
   position: absolute;
   bottom:-15px;
   left:-4px;
-  z-index:-1;
+  z-index: 1;
   background-color:#2B1800;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;

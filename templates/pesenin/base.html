@@ -7,24 +7,22 @@
 </head>
 
 <body>
-    <div class="row">
+    <div class="wrapper">
         <div id="sidebar">
             {% block navbar %}
             {% include 'components/navbar.html' %}
             {% endblock navbar %}
         </div>
-        <div class="col">
-            <div id="content">
-                {% block main_container %}
-                <button type="button" id="sidebarCollapse" class="btn btn-outline-warning m-3">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                {% block content %}
-                {% endblock content %}
-                {% endblock %}
-            </div>
+        <div id="content">
+            {% block main_container %}
+            <button type="button" id="sidebarCollapse" class="btn btn-outline-warning m-3">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            {% block content %}
+            {% endblock content %}
+            {% endblock %}
         </div>
     </div>
 

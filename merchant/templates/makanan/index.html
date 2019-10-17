@@ -21,19 +21,15 @@
 <body>
     <div class = "container">
         <div class = "row">
+        {% for items in food %}
             <div class="col-6 text-center">
-                <img src = "../../../static/img/Asset/Kasir/makanan.png" style = "width:450px">
+                {{ items.nama }}
+                {{ items.desc }}
+                <img src = "{{ items.link_gambar }}" style = "width:450px">
             </div>
-            <div class="col-6 text-center">
-                <a href = "{% url 'merchant:makanan' %}"><img src = "../../../static/img/Asset/Kasir/makanan.png" style = "width:450px"></a>
-            </div>
-            <div class="col-6 text-center">
-                <a href = "{% url 'merchant:makanan' %}"><img src = "../../../static/img/Asset/Kasir/makanan.png" style = "width:450px"></a>
-            </div>
-            <div class="col-6 text-center">
-                <a href = "{% url 'merchant:makanan' %}"><img src = "../../../static/img/Asset/Kasir/makanan.png" style = "width:450px"></a>
-            </div>
+        {% endfor %}
         </div>
     </div>
 </body>
+
 {% endblock content %}

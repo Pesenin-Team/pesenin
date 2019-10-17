@@ -1,4 +1,5 @@
 from django.db import models
+# from dajngo.contrib.auth.models import User
 
 # Create your models here.
 class Merchant(models.Model):

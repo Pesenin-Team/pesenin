@@ -20,35 +20,18 @@
 
 <body>
     <div>
-        <div class="container">
-            <div class="row" style="align-content: center">
-                <div class="col-lg-6" style="text-align: center;">
-                    <!-- <h1>Merchant 1</h1> -->
-                    <div class="gambar">
-                        <img src="../../static/merchant/img/51881839-portrait-of-smiling-cashier-working-in-grocery-store.jpg" style="object-fit: contain;width: 100%;height: 100%;" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-6" style="text-align: center;">
-                    <!-- <h1>Merchant 2</h1> -->
-                    <div class="gambar">
-                        <img src="../../static/merchant/img/51881839-portrait-of-smiling-cashier-working-in-grocery-store.jpg" style="object-fit: contain;width: 100%;height: 100%;" alt="">
-                    </div>
+        <div class="container">   
+            {% for items in penjual %}
+            <div class="row">
+                <div class="col-12">
+                    {{ items.nama_merchant }}
+                    {{ items.desc }}
+                    <img src="{{ items.link_gambar }}" alt="">
+                    
                 </div>
             </div>
-            <div class="row" style="align-content: center">
-                <div class="col-lg-6" style="text-align: center;">
-                    <!-- <h1>Merchant 3</h1> -->
-                    <div class="gambar">
-                        <img src="../../static/merchant/img/51881839-portrait-of-smiling-cashier-working-in-grocery-store.jpg" style="object-fit: contain;width: 100%;height: 100%;" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-6" style="text-align: center;">
-                    <!-- <h1>Merchant 4</h1> -->
-                    <div class="gambar">
-                        <img src="../../static/merchant/img/51881839-portrait-of-smiling-cashier-working-in-grocery-store.jpg" style="object-fit: contain;width: 100%;height: 100%;" alt="">
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
+        </div>
     </div>
 </body>
 {% endblock content %}

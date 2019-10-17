@@ -5,8 +5,10 @@ from .models import Merchant
 
 
 def merchant(request):
-    
-    return render(request, 'merchant/index.html')
+    list_merchant = Merchant.objects.all()
+    content = {
+        "penjual": list_merchant
+    }
+    return render(request, 'merchant/index.html', content)
 
-def makanan(request):
-    return render(request, 'makanan/index.html')
+

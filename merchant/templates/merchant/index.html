@@ -19,9 +19,24 @@
 {% block content %}
 
 <body>
-    <div>
-        <div class="container">   
-            <div class="row" >
+    <!-- <div> -->
+        <div class="container">  
+            <div class="card">
+                <div class="img-box">
+                    <img src="../../static/merchant/img/sketch.png" alt="">
+                </div>
+                <div class="content">
+                    <h2>Someone Famous <br><span>UX/UI Designer</span></h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <ul>
+                        <li><a href="{% url 'merchant:makanan'%}" class="btn btn-outline-success" role="button" aria-pressed="true">Merchant Menu</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- <div class="card"></div>
+            <div class="card"></div> -->
+
+            <!-- <div class="row" >
                     {% for items in penjual %}
                 <div class="col-6" >
                     {{ items.nama_merchant }}
@@ -30,8 +45,8 @@
                     <button></button>
                 </div>
                 {% endfor %}
-            </div>
+            </div> -->
         </div>
-    </div>
+    <!-- </div> -->
 </body>
 {% endblock content %}

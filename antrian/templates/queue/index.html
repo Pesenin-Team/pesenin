@@ -20,9 +20,32 @@
 
 <body>
     <div>
-        <div class="container">
-            <h1>Queue.</h1>
-            <h1>{ to do }</h1>
+        <div class="container ml-5">
+            <h1 class="display-3 font-weight-bold m-auto">
+                <p class="no-deco text-warning">Queue</p>
+            </h1>
+            {% if user.is_authenticated %}
+            {% for items in antrian %}
+            <div class="card kartu mt-3">
+                <div class="card-header">
+                    <strong>A60</strong>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-2">
+                            <div class="foodicon">
+                                <img src="{{ items.foto }}" alt="" class="rounded-circle">
+                            </div>
+                        </div>
+                        <div class="col-10 pt-3">
+                            <h5 class="card-title">{{ items }}</h5>
+                            <p class="card-text text-danger">{{ items.status }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% endif %}
         </div>
     </div>
 </body>

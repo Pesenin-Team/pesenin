@@ -10,3 +10,12 @@ class Merchant(models.Model):
     def __str__(self):
         return self.nama_merchant
 
+class Makanan(models.Model):
+    merchant = models.ForeignKey(Merchant, on_delete=models.CASCADE)
+    nama = models.CharField(max_length=50)
+    deskripsi = models.CharField(max_length=50)
+    foto = models.CharField(max_length=500)
+
+    def __str__(self):
+        return self.nama
+

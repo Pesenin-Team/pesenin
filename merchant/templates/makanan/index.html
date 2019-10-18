@@ -21,7 +21,15 @@
 <body>
     <div class = "container">
         <div class = "row">
+        {% for items in food %}
+            <div class="col-6 text-center">
+                {{ items.nama }}
+                {{ items.desc }}
+                <img src = "{{ items.link_gambar }}" style = "width:450px">
+            </div>
+        {% endfor %}
         </div>
     </div>
 </body>
+
 {% endblock content %}

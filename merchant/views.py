@@ -18,3 +18,10 @@ def makanan(request):
         "food": list_makanan
     }
     return render(request, 'makanan/index.html', content)
+
+def detail_makanan(request, pk):
+    food_details = Makanan.objects.get(pk=pk)
+    content = {
+        "food_detail": food_details
+    }
+    return render(request, 'makanan/display.html', content)

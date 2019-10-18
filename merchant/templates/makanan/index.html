@@ -23,9 +23,7 @@
         <div class = "row">
         {% for items in food %}
             <div class="col-6 text-center">
-                {{ items.nama }}
-                {{ items.desc }}
-                <img src = "{{ items.link_gambar }}" style = "width:450px">
+                <a href="{% url 'merchant:detail' pk=items.id %}"><img src = "{{ items.foto }}" style = "width:450px"></a>
             </div>
         {% endfor %}
         </div>

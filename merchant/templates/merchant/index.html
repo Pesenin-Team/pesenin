@@ -23,10 +23,10 @@
         <div class="container">   
             {% for items in penjual %}
             <div class="row">
-                <div class="col-12">
-                    {{ items.nama_merchant }}
+                <div class="col-6">
+                    {{ items.nama_merchant }} <br>
                     {{ items.desc }}
-                    <img src="{{ items.link_gambar }}" alt="">
+                    <img src="{{ items.link_gambar }}" alt="" style = "width: 450px">
                     
                 </div>
             </div>

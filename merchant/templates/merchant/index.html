@@ -20,17 +20,22 @@
 
 <body>
     <div>
-        <div class="container">   
-            {% for items in penjual %}
-            <div class="row">
-                <div class="col-6">
-                    {{ items.nama_merchant }} <br>
-                    {{ items.desc }}
-                    <img src="{{ items.link_gambar }}" alt="" style = "width: 450px">
-                    
+        <div class="container ml-5">
+            <h1 class="display-3 font-weight-bold m-auto">
+                <p class="no-deco text-warning">Our Merchants</p>
+            </h1>
+            <div class="row d-flex flex-wrap">
+                {% for items in penjual %}
+                <div class="penjual mx-5 mt-3" style="width: 250px;">
+                    <div class="gambar">
+                        <a href="{% url 'merchant:makanan' %}">
+                            <img class="rounded" src="{{ items.link_gambar }}" style="object-fit: contain;"
+                                height="100%" width="100%">
+                        </a>
+                    </div>
                 </div>
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
     </div>
 </body>

@@ -20,7 +20,7 @@ def tambah_antrian(request, pk):
         user = request.user
         makanan = Makanan.objects.get(pk=pk)
         nama = makanan.nama
-        info = makanan.deskripsi
+        info = "Not Ready"
         link = makanan.foto
         antrian_baru = Queue(
             user=user, nama_makanan=nama, status=info, foto=link)

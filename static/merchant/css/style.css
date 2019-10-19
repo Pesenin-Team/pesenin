@@ -1,97 +1,14 @@
-.merchant_section{
-    position: relative;
-    width: 1000px;
-    margin: 50px auto 0;
-    height: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-columns: 440px;
-    grid-gap: 40px;
+.penjual img{
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
 }
-
-.container .card{
-    position: relative;
-    background: #ccc;
-    border-radius: 10px;
-    transition: 0.5s;
+.isi{
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    font-size: 40px;
+    color: white;
+    white-space: nowrap;
     overflow: hidden;
-    height: 440px;
 }
-
-.container .card .img-box{
-   position: absolute;
-   top: 0%;
-   left: 0%;
-   width: 100%;
-   height: 100%;
-   transition: 0.5s;
-}
-
-.container .card:hover .img-box{
-    opacity: 0.5;
-}
-
-.container .card .img-box img{
-    width: 100%;
-}
-
-.container .card .content{
-    position: absolute;
-    width: 100%;
-    height: 60%;
-    bottom: -240px;
-    padding: 20px;
-    padding-top: 60px;
-    box-sizing: border-box;
-    text-align: center;
-    transition: 0.5s;
-}
-
-.container .card:hover .content{
-    bottom: 0;
-}
-
-.container .card:nth-child(1) .content{
-    background: linear-gradient(0deg, #c21833, transparent);
-}
-
-.container .card .content h2{
-    margin: 0 0 10px;
-    padding: 0;
-    color: #fff;
-    font-size: 20px;
-}
-
-.container .card .content h2 span{
-    color: #ffeb3b;
-    font-size: 16px;
-}
-
-.container .card .content p{
-    margin: 0;
-    padding: 0;
-    color: #fff;
-    font-size: 16px;
-}
-
-.container .card .content ul{
-    display: flex;
-    margin: 20px 0 0;
-    padding: 0;
-    align-items: center;
-    justify-content: center;
-}
-
-.container .card .content ul li{
-    list-style: none;
-}
-
-.container .card .content ul li a {
-    color: #ffeb3b;
-    padding: 0 10px;
-    font-size: 18px;
-    transition: 0.5s;
-}
-
-
-

@@ -19,33 +19,23 @@
 {% block content %}
 
 <body>
-    <!-- <div> -->
-        <div class="container merchant_section">  
-            <div class="card">
-                <div class="img-box">
-                    <img src="../../static/merchant/img/sketch.png" alt="">
-                </div>
-                <div class="content">
-                    <h2>Someone Famous <br><span>UX/UI Designer</span></h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <ul>
-                        <li><a href="{% url 'merchant:makanan'%}" class="btn btn-outline-success" role="button" aria-pressed="true">Merchant Menu</a></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- <div class="card"></div>
-            <div class="card"></div> -->
-
-            <!-- <div class="row" >
-                    {% for items in penjual %}
-                <div class="col-6" >
-                    {{ items.nama_merchant }}
-                    {{ items.desc }}
-                    <img src="{{ items.link_gambar }}" style="object-fit: contain" width="100%" height="100%" alt="">
-                    <button></button>
+    <div>
+        <div class="container ml-5">
+            <h1 class="display-3 font-weight-bold m-auto">
+                <p class="no-deco text-warning">Our Merchants</p>
+            </h1>
+            <div class="row d-flex flex-wrap">
+                {% for items in penjual %}
+                <div class="penjual mx-5 mt-3" style="width: 250px;">
+                    <div class="gambar">
+                        <a href="{% url 'merchant:makanan' %}">
+                            <img class="rounded" src="{{ items.link_gambar }}" style="object-fit: contain;"
+                                height="100%" width="100%">
+                        </a>
+                    </div>
                 </div>
                 {% endfor %}
-            </div> -->
+            </div>
         </div>
     <!-- </div> -->
 </body>

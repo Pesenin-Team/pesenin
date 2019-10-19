@@ -21,9 +21,23 @@
 <body>
     <div>
         <div class="container ml-5">
-            <h1 class="display-3 font-weight-bold m-auto">
-                <p class="no-deco text-warning">Queue</p>
-            </h1>
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <h1 class="display-3 font-weight-bold m-auto">
+                        <p class="no-deco text-warning">Queue</p>
+                    </h1>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 d-flex">
+                    <!-- Form Search -->
+                    <form class="form-inline" action="{% url 'antrian:search' %}" method="POST">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="search" placeholder="Search Antrian">
+                        </div>
+                        <button type="submit" class="btn btn-warning ml-1">S</button>
+                    </form>
+                </div>
+            </div>
             {% if user.is_authenticated %}
             {% for items in antrian %}
             <div class="card kartu mt-3">

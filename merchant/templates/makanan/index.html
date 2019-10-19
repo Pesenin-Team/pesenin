@@ -19,11 +19,11 @@
 {% block content %}
 
 <body>
-    <div class = "container">
+    <div class = "container food_section">
         <div class = "row">
         {% for items in food %}
             <div class="col-6 text-center">
-                <a href="{% url 'merchant:detail' pk=items.id %}"><img src = "{{ items.foto }}" style = "width:450px"></a>
+                <a href="{% url 'merchant:detail' pk=items.id %}"><img src = "{{ items.foto }}"></a>
             </div>
         {% endfor %}
         </div>

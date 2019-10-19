@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Merchant
 from .models import Makanan
 
@@ -14,6 +14,7 @@ def merchant(request):
 
 
 def makanan(request):
+    # merchant = Merchant.objects.get(pk=pk)
     list_makanan = Makanan.objects.all()
     content = {
         "food": list_makanan

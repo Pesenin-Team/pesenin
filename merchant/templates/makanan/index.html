@@ -19,7 +19,13 @@
 {% block content %}
 
 <body>
-    <div class="container">
+    <div class="container ml-5">
+        <h1 class="display-3 font-weight-bold m-auto">
+            <p class="no-deco text-warning">Foods</p>
+        </h1>
+        <a href="{% url 'merchant:merchant' %}">
+            <h4 class="display-5">Back.</h4>
+        </a>
         <div class="row">
             {% for items in food %}
             <div class="col-6 text-center">

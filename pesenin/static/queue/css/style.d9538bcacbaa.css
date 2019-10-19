@@ -1,0 +1,40 @@
+.kartu {
+    width: 800px;
+}
+
+.foodicon img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+
+@media (max-width: 1300px){
+    .kartu{
+        width: 500px;
+    }
+}
+
+@media (max-width: 1000px){
+    .kartu{
+        width: 450px;
+    }
+}
+
+@media (max-width: 768px){
+    .kartu{
+        width: 400px;
+    }
+}
+
+@media (max-width: 576px){
+    .kartu{
+        width: 300px;
+    }
+}
+
+@media (max-width: 350px){
+    .kartu{
+        width: 250px;
+    }
+}

@@ -1,0 +1,49 @@
+{% extends 'pesenin/base.html' %}
+
+{% block navbar %}
+{% with current_nav='merchant' %}
+{{ block.super }}
+{% endwith %}
+{% endblock navbar%}
+
+{% block main_container %}
+{% with vertical_center=True %}
+{{ block.super }}
+{% endwith %}
+{% endblock main_container %}
+
+
+{% load static %}
+{% block custom_styles %}
+{% endblock custom_styles %}
+{% block content %}
+
+<body>
+    <div class="row">
+        <div class="col-12 text-center mb-3">
+            <div class="container">
+                <img class="rounded-circle" src="{{food_detail.foto}}" style="width:200px;height: 200px;">
+            </div>
+        </div>
+        <div class="col-12">
+            <h2 class="display-3 font-weight-bold text-center m-auto text-warning">
+                {{food_detail.nama}}
+            </h2>
+        </div>
+        <div class="col-12 text-center mt-3 mb-5">
+            <h3>
+                {{food_detail.deskripsi}}
+            </h3>
+        </div>
+        <div class="col-6 text-center">
+            <a href="{% url 'antrian:tambah' food_detail.id %}" class="btn btn-success btn-lg active" role="button"
+                aria-pressed="true">Order</a>
+        </div>
+        <div class="col-6 text-center">
+            <a href="{% url 'merchant:makanan' %}" class="btn btn-danger btn-lg active" role="button"
+                aria-pressed="true">Back</a>
+        </div>
+    </div>
+</body>
+
+{% endblock content %}

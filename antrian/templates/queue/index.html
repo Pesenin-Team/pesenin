@@ -20,9 +20,50 @@
 
 <body>
     <div>
-        <div class="container">
-            <h1>Queue.</h1>
-            <h1>{ to do }</h1>
+        <div class="container ml-5">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <h1 class="display-3 font-weight-bold m-auto">
+                        <p class="no-deco text-warning">Queue</p>
+                    </h1>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 d-flex">
+                    <!-- Form Search -->
+                    <form class="form-inline" action="{% url 'antrian:search' %}" method="POST">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="search" placeholder="Search Antrian">
+                        </div>
+                        <button type="submit" class="btn btn-warning ml-1">S</button>
+                    </form>
+                </div>
+            </div>
+            {% if user.is_authenticated %}
+            {% for items in antrian %}
+            <div class="card kartu mt-3">
+                <div class="card-header">
+                    <strong>A60</strong>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-2">
+                            <div class="foodicon">
+                                <img src="{{ items.foto }}" alt="" class="rounded-circle">
+                            </div>
+                        </div>
+                        <div class="col-10 pt-3">
+                            <h5 class="card-title">{{ items }}</h5>
+                            <p class="card-text text-danger">{{ items.status }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% else %}
+            <h3 class="display-5 font-weight-bold m-auto mt-5">
+                <p class="no-deco text-dark mt-5">Sorry You have to log in to see the queue.</p>
+            </h3>
+            {% endif %}
         </div>
     </div>
 </body>

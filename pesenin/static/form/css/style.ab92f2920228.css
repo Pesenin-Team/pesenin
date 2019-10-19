@@ -1,0 +1,50 @@
+.title{
+    color: #FDB201;
+    font-size: 7vh;
+    margin-left:  2vh;
+    font-weight: bold;
+}
+.teks{
+    margin-left: 2vh;
+    font-size: 2.8vh;
+}
+.contact{
+    margin-left: 2vh;
+    font-size: 4vh;
+    align-items: center;
+    align-content: space-between;
+}
+.btn{ 
+    border-radius: 12px;
+    background-color: #8BB03E;
+    border: none;
+    font-size: 3vh;
+    font-weight: bold;
+    color: white;
+    padding: 1.5vh 1.5vh;
+} 
+.title2{
+    color: #FDB201;
+    font-size: 5vh;
+    margin-top: 0.1vh;
+    margin-left:  2vh;
+    font-weight: bold;
+}
+.title3{
+    color: #FDB201;
+    font-size: 15vh;
+    font-weight: bold;
+}
+.teks2{
+    font-size: 5vh;
+    color: #8BB03E
+}
+.thanks{
+    align-items: stretch;
+}
+
+
+
+
+
+

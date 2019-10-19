@@ -59,7 +59,7 @@
         {% if user.is_authenticated %}
         <li class="mx-2 text-center">
             <a class="nav-link{% if current_nav == 'profile' %} font-weight-bold text-light{% endif %} text-light"
-                href="{% url 'login:profile' %}">Profil</a>
+                href="{% url 'login:profile' %}">Profile</a>
         </li>
         <li class="mx-2 text-center">
             <a class="nav-link text-light" href="{% url 'login:logout' %}">Logout</a>

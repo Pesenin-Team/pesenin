@@ -3,7 +3,6 @@ from .models import Queue
 from merchant.models import Makanan
 # Create your views here.
 
-
 def antri(request):
     if (request.user.is_authenticated):
         user = request.user

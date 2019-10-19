@@ -28,3 +28,21 @@ def detail_makanan(request, pk):
         "food_detail": food_details
     }
     return render(request, 'makanan/display.html', content)
+
+def search_merchant(request):
+    nama = request.POST.get('search')
+    try:
+        merchant = Merchant.objects.get(nama_merchant = nama)
+        return render(request, 'search_merchant.html', {'merchants': merchant})
+    except Merchant.DoesNotExist:
+        error = "Sorry looks like your food is not here."
+        return render(request, 'search_merchant.html', {'error': error})
+
+def search_makanan(request):
+    nama = request.POST.get('search')
+    try:
+        makanan = Makanan.objects.get(nama = nama)
+        return render(request, 'search_makanan.html', {'makanans': makanan})
+    except Makanan.DoesNotExist:
+        error = "Sorry looks like your food is not here."
+        return render(request, 'search_makanan.html', {'error': error})

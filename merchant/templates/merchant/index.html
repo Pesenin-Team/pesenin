@@ -24,6 +24,16 @@
             <h1 class="display-3 font-weight-bold m-auto">
                 <p class="no-deco text-warning">Our Merchants</p>
             </h1>
+            <div class="col-lg-6 col-md-12 col-sm-12 d-flex">
+            <!-- Form Search -->
+            <form class="form-inline" action="{% url 'merchant:search_merchant' %}" method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <input type="text" class="form-control" name="search" placeholder="Search Merchant">
+                </div>
+            <button type="submit" class="btn btn-warning ml-1">Search</button>
+            </form>
+            </div>
             <div class="row d-flex flex-wrap">
                 {% for items in penjual %}
                 <div class="penjual mx-5 mt-3" style="width: 250px;">

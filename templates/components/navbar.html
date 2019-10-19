@@ -1,39 +1,3 @@
-<!-- <nav class="navbar navbar-expand-md fixed-top bg-warning navbar-dark">
-    <a class="navbar-brand" href="{% url 'index' %}">Pesenin</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse order-1 order-md-0 dual-collapse" id="collapsibleNavbar">
-        {% block navbar_contents %}
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item mx-2">
-                <a class="nav-link{% if current_nav == 'home' %} font-weight-bold text-light{% endif %}"
-                    href="{% url 'login:home' %}">Beranda</a>
-            </li>
-            <li class="nav-item mx-2">
-                <a class="nav-link{% if current_nav == 'contact' %} font-weight-bold text-light{% endif %}"
-                    href="{% url 'form:contact' %}">Contact</a>
-            </li>
-        </ul>
-        <ul class="navbar-nav mr-0">
-            {% if user.is_authenticated %}
-            <li class="nav-item mx-2">
-                <a class="nav-link{% if current_nav == 'profile' %} font-weight-bold text-light{% endif %}"
-                    href="{% url 'login:profile' %}">Profil</a>
-            </li>
-            <li class="nav-item mx-2">
-                <a class="nav-link" href="{% url 'login:logout' %}">Logout</a>
-            </li>
-            {% else %}
-            <li class="nav-item mx-2">
-                <a class="nav-link" href="{% url 'login:login' %}">Login</a>
-            </li>
-            {% endif %}
-        </ul>
-        {% endblock navbar_contents%}
-    </div>
-</nav> -->
-
 <div class="sidebar-header align-items-center" href="{% url 'index' %}" style="z-index: 9999;">
     <a href="{% url 'login:home' %}"><img src="../../static/img/LOGO.png"></a>
 </div>

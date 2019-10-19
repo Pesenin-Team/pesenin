@@ -1,0 +1,37 @@
+{% extends 'pesenin/base.html' %}
+
+{% block navbar %}
+{% with current_nav='contact' %}
+{{ block.super }}
+{% endwith %}
+{% endblock navbar%}
+
+{% block main_container %}
+{% with vertical_center=True %}
+{{ block.super }}
+{% endwith %}
+{% endblock main_container %}
+
+
+{% load static %}
+{% block custom_styles %}
+{% endblock custom_styles %}
+{% block content %}
+
+<body>
+    <div class="container">
+        <div class="row thanks">
+        <div class="container">
+            <div class="col-md-12 col-sm-6 col-3"><br>
+                <h1 class="title3">Thank You</h1>
+                <p class="teks2">for using our service</p>
+                <p class="teks2">See you next!</p>
+                <img class="img-fluid" src="../../static/img/pesawat.png" alt="Pesawat" width="400" height="400">
+            </div>
+            </div>
+        </div>
+    </div>
+    
+
+</body>
+{% endblock content %}
